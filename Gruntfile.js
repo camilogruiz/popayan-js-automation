@@ -111,12 +111,16 @@ module.exports = function (grunt) {
             scripts: {
                 files: ['Gruntfile.js', 'app/scripts/**/*.js', '!app/scripts/app.js'],
                 tasks: ['jshint', 'concat:dev']
+            },
+            tests: {
+                files: ['app/scripts/app.js'],
+                tasks: ['jasmine']
             }
         },
         // Server + Live Reload
         browserSync: {
             options: {
-                browser: ['google chrome', 'firefox', 'safari'],
+                browser: ['google chrome'],
                 injectChanges: false
             },
             dev: {
@@ -161,6 +165,12 @@ module.exports = function (grunt) {
                 push: true,
                 pushTo: 'origin'
             }
+        },
+        jasmine: {
+            src: ['app/scripts/app.js'],
+            options: {
+                specs: 'tests/popayanSpec.js'
+            }
         }
     });
 
@@ -177,12 +187,20 @@ module.exports = function (grunt) {
         'scsslint', // Quality Check on *.scss
         'sass:dev', // Compile sass
         'concat:dev', // Concat all *.js files
+        // 'jasmine',
         'browserSync:dev', // Start server
         'watch' // Watch for changes
     ]);
 
+    grunt.registerTask('testing', 'Run unit tests', [
+        'concat:dev',
+        'jasmine'
+    ]);
+
     // BUILD TASKS
     grunt.registerTask('prepare', 'Prepare everything for the build', [
+        'concat:dev',
+        // 'jasmine',
         'clean:prepare', // Delete .tmp folder
         'clean:build', // Delete build folder
         'scsslint:dev', // Lint scss

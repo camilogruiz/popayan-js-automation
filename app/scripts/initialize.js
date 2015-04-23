@@ -9,9 +9,9 @@ var POPAYANJS = POPAYANJS || {};
 
 // New instance
 POPAYANJS.App = new POPAYANJS.Counter({
-    button: document.getElementsByTagName('button')[0],
-    paragraph: document.getElementsByClassName('counter')[0],
+    buttonElement: document.getElementsByTagName('button')[0],
+    labelElement: document.getElementsByClassName('counter')[0],
 });
 
 // Add listeners to the DOM elements
-POPAYANJS.App.startListeners();
+ POPAYANJS.App.startListeners();
