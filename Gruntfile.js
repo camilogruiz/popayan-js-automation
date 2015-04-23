@@ -6,7 +6,10 @@ module.exports = function (grunt) {
      */
     var deployVersion = grunt.option('deployVersion') || '';
 
-    // 1. Get all grunt plugins installed
+    // 1. Get all grunt plugins installed automatically
+    // Load Grunt Tasks Manually
+    // We can avoid all this by using load-grunt-tasks
+    // grunt.loadNpmTasks('grunt-contrib-jshint');
     require('load-grunt-tasks')(grunt);
 
     // 2. Configurate Grunt
@@ -106,14 +109,14 @@ module.exports = function (grunt) {
                 tasks: ['scsslint', 'sass:dev']
             },
             scripts: {
-                files: ['app/scripts/**/*.js', '!app/scripts/app.js'],
+                files: ['Gruntfile.js', 'app/scripts/**/*.js', '!app/scripts/app.js'],
                 tasks: ['jshint', 'concat:dev']
             }
         },
         // Server + Live Reload
         browserSync: {
             options: {
-                browser: ['google chrome'],
+                browser: ['google chrome', 'firefox', 'safari'],
                 injectChanges: false
             },
             dev: {
