@@ -1,6 +1,8 @@
 Popayan.js Automation Example
 =====
 
+Clone this repo and then run `npm install`
+
 ## What do we need?
 
 
