@@ -1,0 +1,23 @@
+.container {
+  margin: 0 auto;
+  max-width: 400px;
+  width: 90%; }
+  .container button {
+    background: #50afdd;
+    border: 0;
+    border-radius: 5px;
+    color: #dd3b38;
+    display: block;
+    font-size: 30px;
+    height: 75px;
+    margin: 0 auto;
+    width: 100%; }
+  .container .counter {
+    color: #2e2c30;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center; }
+
+body {
+  background: #d9d9d9; }

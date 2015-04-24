@@ -1,0 +1,7 @@
+linters:
+    Indentation:
+        width: 4
+    ### Ad more rules as you wish.
+    ### Rules will be merged with the default rules.
+    ### Rules can be found here: 
+    ### https://github.com/brigade/scss-lint/blob/master/config/default.yml
