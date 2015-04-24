@@ -23,17 +23,17 @@ describe("Popayan.js", function () {
         expect(popayan.labelElement).toBeDefined();
     });
 
-    it("POPAYANJS.Counter.add() should incremenet 'count' property by 1", function () {
+    it("POPAYANJS.Counter.add() should incremenet 'count' property by 10", function () {
         popayan.add();
-        expect(popayan.count).toEqual(1);
+        expect(popayan.count).toEqual(10);
 
         popayan.add();
-        expect(popayan.count).toEqual(2);
+        expect(popayan.count).toEqual(20);
 
         popayan.add();
-        expect(popayan.count).toEqual(3);
+        expect(popayan.count).toEqual(30);
 
         popayan.add();
-        expect(popayan.count).toEqual(4);
+        expect(popayan.count).toEqual(40);
     });
 });
