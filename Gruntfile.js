@@ -167,8 +167,8 @@ module.exports = function (grunt) {
     // 3. Register tasks
 
     // DEVELOPMENT TASKS
-    grunt.registerTask('quality', 'Quality check', [
-        'jshint:dev',
+    grunt.registerTask('popayanjs', 'Quality check', [
+        'jshint',
         'scsslint'
     ]);
 

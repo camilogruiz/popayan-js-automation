@@ -16,7 +16,7 @@ POPAYANJS.Counter = function (options) {
 
 POPAYANJS.Counter.prototype.add = function () {
     'use strict';
-    this.count++;
+    this.count = this.count + 10;
     return this.count;
 };
 
